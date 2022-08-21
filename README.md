@@ -14,10 +14,14 @@ Avaliações, exercícios de prática, trabahos, qualquer tipo de código que eu
 
 #### Os códigos são sólidos e funcionais?
 
-Na maioria das vezes sim, vou sempre tentar enviar para cá somente códigos funcionando corretamente mas nem sempre isso será possível
+Na maioria das vezes sim, vou sempre tentar enviar para cá somente códigos funcionando corretamente mas nem sempre isso será possível.
 
 #### Posso copiar seu código?
 
 Os códigos serão visíveis para todos apenas após o período avaliativo (ou seja, até o prazo de entrega do código chegar, ele vai ficar escondido). Nesse caso, sim, porém não é o objetivo do repositório, um caminho melhor para seu futuro como desenvolvedor seria analisar o código, e tentar fazer da sua própria maneira.
+
+#### Como posso saber mais sobre um código deste repositório que me interessou?
+
+  Pode me chamar no instagram: https://www.instagram.com/ry___silva/
 
 
