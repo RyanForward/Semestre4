@@ -10,7 +10,7 @@ Todos os códigos do quarto semestre de Sistemas de Informação deverão estar 
 ## FAQ
 
 #### O que são os códigos presentes no repositório?
-Avaliações, exercícios de prática, trabahos, qualquer tipo de código que eu precisar criar durante a faculdade, vai vir para cá.
+Avaliações, exercícios de prática, trabalhos, qualquer tipo de código que eu precisar criar durante a faculdade, vai vir para cá.
 
 #### Os códigos são sólidos e funcionais?
 
