@@ -1,6 +1,5 @@
 # Quarto Semestre   
 
-[![GitHub license](https://img.shields.io/github/license/RyanForward/Semestre4?style=plastic)](https://github.com/RyanForward/Semestre4/blob/main/LICENSE) 
 
 Todos os códigos do quarto semestre de Sistemas de Informação deverão estar neste repositório, a fim de organizar e manter um histórico de todos os erros e aprendizados do semestre
 
