@@ -5,11 +5,7 @@ import sys
 
 matriz = entraDados(inst=sys.argv[1])
 
-row = matriz[0]
-col = matriz[1]
-
-print(row)
-print(col)
+row, col = matriz
 
 result = saiDados(inst=sys.argv[1], row=row, col=col)
 print(result)
