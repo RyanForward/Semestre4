@@ -5,4 +5,4 @@ def saiDados(inst, row, col):
     file.write(text) # Salva no arquivo txt
     file.close() # Fecha o arquivp
 
-    return text # Retorna o texto formatado para impressão na tela
+    return text # Retorna o texto formatado para impressão na tela.
