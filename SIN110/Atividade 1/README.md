@@ -6,14 +6,19 @@ resultados, que será usado para realização das atividades práticas durante a
 ## Descrição
 
 Considerando os arquivos de instâncias de grafos disponibilizados no portal da disciplina:
-  ▪ Desenvolva um protótipo de software que faça a leitura do arquivo de uma dada instância,
+
+▪ Desenvolva um protótipo de software que faça a leitura do arquivo de uma dada instância,
   mostre um determinado resultado na tela e o salve em um outro arquivo;
-  ▪ O nome da instância deverá ser passado como argumento (parâmetro) para o método no
+
+▪ O nome da instância deverá ser passado como argumento (parâmetro) para o método no
   comando de execução;
-  ▪ Uma função de entrada deverá ler o conteúdo do arquivo da respectiva instância e armazená-lo
+
+▪ Uma função de entrada deverá ler o conteúdo do arquivo da respectiva instância e armazená-lo
   em uma matriz do tipo Numpy (consulte a documentação da biblioteca em https://numpy.org);
-  ▪ Obtenha a dimensão da matriz (i.e. quantidade de linhas e de colunas);
-  ▪ Como resultado, uma função de saída deverá mostrar na tela e salvar em arquivo o nome da
+
+▪ Obtenha a dimensão da matriz (i.e. quantidade de linhas e de colunas);
+
+▪ Como resultado, uma função de saída deverá mostrar na tela e salvar em arquivo o nome da
   instância e a dimensão da respectiva matriz no formato: nome_instância qtd_linhas qtd_colunas.
   
 ## Entrega 
