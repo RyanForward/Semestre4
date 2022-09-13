@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int main(void){
+    pid_t pid;
+    pid_t pidFilhoA;
+    pid_t pidFilhoB;
+    pid_t pidFilhoC;
+    pid_t pidFilhoD;
+    
+    if ((pidFilhoA = fork()) < 0) {
+    perror("fork");
+    exit(1);
+    }
+    //filhoA
+    if (pidFilhoA == 0) {
+        //inicio filho C
+            if ((pidFilhoC = fork()) < 0 ){
+                perror("fork");
+                exit(1);
+            }
+            //código do filho C
+            if(pidFilhoC == 0){
+                for (int i = 3000; i < 4000; i++){
+                printf("%d", i);
+            }   
+            }
+        else{
+            //filhoD
+            if ((pidFilhoD = fork())< 0){
+                    perror("fork");
+                    exit(1);
+            }
+    
+            if ((pidFilhoD == 0)){
+                for (int i = 4000; i < 5000; i++){
+                printf("%d", i);
+            }   
+            }
+        else{
+            //O código aqui dentro será executado no processo filhoA
+            for (int i = 1000; i < 2000; i++){
+            printf("%d", i);
+            }   
+            //processo filho1 do filho1 
+        }}
+    }
+    //filhoB
+    else {
+    if ((pidFilhoB = fork())< 0){
+        perror("fork");
+        exit(1);
+    }
+    if (pidFilhoB == 0){
+        //O código neste trecho será executado no processo filhoB -> pai
+        for (int i = 2000; i < 3000; i++){
+            printf("%d", i);
+        }
+    }
+    else{
+        //processo pai
+        for (int i = 0; i < 1000; i++){
+            printf("%d", i);
+        }
+    }}
+    printf("\n\n---------------------------------------------\n\n");
+    return 0;
+}
+
+
+
