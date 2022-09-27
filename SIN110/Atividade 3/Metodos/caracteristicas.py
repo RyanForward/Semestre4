@@ -92,7 +92,11 @@ def densidade(matriz):
 
 
 def insereAresta(matriz, vi, vj):
-    matriz[vi][vj] += 1
+    if tipoGrafo(matriz) == 1
+        matriz[vi][vj] += 1
+    else:
+        matriz[vi][vj] += 1
+        matriz[vj][vi] += 1
     return matriz
 
 
@@ -107,7 +111,11 @@ def insereVertice(matriz, vi):
 
 
 def removeAresta(matriz, vi, vj):
-    matriz[vi][vj] -= 1
+    if tipoGrafo(matriz) == 1
+        matriz[vi][vj] += -1
+    else:
+        matriz[vi][vj] += -1
+        matriz[vj][vi] += -1
     return matriz
 
 
