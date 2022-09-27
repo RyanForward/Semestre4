@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <pthread.h>
+
+
+ void *run(void *arg)
+ {
+ child_param *cp = ((child_param) *arg);
+ int i, soma = 0;
+
+	if ((cp>6) && (cp<12))
+		printf("Bom dia!");
+	if ((cp>12) && (cp<19))
+		printf("Boa tarde!");
+	if (((cp>0) && (cp<6)) && ((cp>19) && (cp<24)))
+		printf("Boa noite!"); 
+
+
+ pthread_exit(NULL);
+ }
+
+ int main()
+ {
+ 	
+ child_param h;
+ child_param m;
+ 
+ scanf("%d", &h); 
+ scanf("%d", &m);
+ 
+ 
+
+ pthread_t t1, t2;
+
+ pthread_create(&t1, NULL, run, (void *) &h);
+
+ pthread_join(t1, NULL);
+ pthread_join(t2, NULL);
+
+ pthread_exit(NULL);
+ }
