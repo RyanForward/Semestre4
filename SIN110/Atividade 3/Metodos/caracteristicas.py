@@ -25,7 +25,6 @@ def verificaAdjacencia(matriz, vi, vj):
     print('Vertices', vi, 'e', vj, 'são adjacentes?', verticesAdjacentes, '\n')
     return verticesAdjacentes
 
-
 def tipoGrafo(matriz):
     # parametros para definição do tipo de grafo
     assimetria = 0
@@ -33,7 +32,8 @@ def tipoGrafo(matriz):
     laco = 0
 
     # tamanho da matriz
-    mat = matriz.shape()
+    
+    mat = np.shape(matriz)
     dimensao = mat[1]
 
     for vi in range(dimensao):
@@ -49,16 +49,16 @@ def tipoGrafo(matriz):
 
         # Retornos
         if caracter == (1, 0, 0):
-            print("O grafo é um dígrafo")
+            print(1)
             return 1  # Assimetria indica um digrafo
         if caracter == (0, 1, 0):
-            print("O grafo é um multígrafo")
+            print(2)
             return 2  # Arestas paralelas somente, indicam um multígrafo
         if caracter == (0, 1, 1):
-            print("O grafo é um pseudografo")
+            print(3)
             return 3  # Arestas paralelas e laços indicam um pseudografo
         else:
-            print("O grafo é normal")
+            print(0)
             return 0  # Nenhuma das características indicam um grafo normal
 
 
