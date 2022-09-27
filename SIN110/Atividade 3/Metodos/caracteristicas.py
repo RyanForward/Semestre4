@@ -14,6 +14,8 @@ caracteristicas - Funções para obtenção das características do grafo e oper
 Entrada: matriz de adjacências (numpy.ndarray), vi (Integer), vj (Integer)
 Saída: 0 (Integer) se vi e vj NÃO são adjacentes; 1 se vi e vj são adjacentes'''
 
+import numpy as np
+
 
 def verificaAdjacencia(matriz, vi, vj):
     if matriz[vi][vj] > 0:  # Se célula M[vi][vj] for maior que 0 existe uma ou mais arestas
