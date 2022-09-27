@@ -114,5 +114,5 @@ def removeAresta(matriz, vi, vj):
 def removeVertice(matriz, vi):
     vert = qtdVertices(matriz)
     for i in range(vert):
-        matriz[i][vi] = None
-        matriz[vi][i] = None
+        matriz[i][vi] = -1
+        matriz[vi][i] = -1
