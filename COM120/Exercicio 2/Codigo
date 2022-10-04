@@ -1,0 +1,80 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <time.h>
+ 
+double mediaa = 0;
+int maior_valor;
+int menor_valor;
+int *vetor;
+int n = 0;
+
+void *media(void *arg){
+  
+   int soma = 0;
+ 
+   for(int i=0; i<n; i++){
+        soma += vetor[i];
+   }
+ 
+   mediaa = (double)(soma / n)*1.0;
+ 
+   return NULL;
+}
+
+void *calcMaiorValor(void *arg){
+    maior_valor = vetor[0];
+
+    for(int a=0; a<n; a++){
+        if(vetor[a] > maior_valor){
+            maior_valor = vetor[a];
+        }
+    }
+
+    return NULL;
+}
+
+void *calcMenorValor(void *arg){
+
+    menor_valor = vetor[0];
+    
+    for(int a=0; a<n; a++){
+        if(vetor[a] < menor_valor){
+            menor_valor = vetor[a];
+        }
+    }
+
+    return NULL;
+}
+
+int main(int argc, const char * argv[]){
+ 
+   srand(time(NULL));
+ 
+   n = atoi(argv[1]);
+   vetor = malloc(sizeof(int) *n);
+ 
+   for(int i=0; i<n; i++){
+        vetor[i] = rand() % 100 + 1;
+    }
+ 
+   pthread_t thread_media;
+   pthread_create(&thread_media, NULL, media, (void *) &vetor);
+   pthread_join(thread_media, NULL);
+
+   pthread_t menorValor;
+   pthread_create(&menorValor, NULL, calcMenorValor, (void *) &vetor);
+   pthread_join(menorValor, NULL);
+ 
+   pthread_t maiorValor;
+   pthread_create(&maiorValor, NULL, calcMaiorValor, (void *) &vetor);
+   pthread_join(maiorValor, NULL);
+
+   printf("\nMedia: %lf\n", mediaa);
+   printf("Menor valor: %d\n", menor_valor);
+   printf("Maior valor: %d\n", maior_valor);
+ 
+   return 0;
+}
+
+# Feito com Nicole Ribeiro de Paula
