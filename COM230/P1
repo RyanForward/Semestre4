@@ -1,0 +1,52 @@
+
+-- Retorne o nome dos func, os nomes dos projetos e a quantidade de horas trabalhadas 
+-- pelo funcionario no projeto incluindo o nome dos funcionarios que nao trabalham em projetos
+-- from funcionario f left join alocacao a on f.codigo= a.codf
+-- left join projeto p on a.codp = p.codigo
+
+
+-- Retorne o nome dos func, os nomes dos projetos e a quantidade de horas trabalhadas pelo
+-- funcionario no projeto incluindo o nome dos funcionarios que nao trabalham em projetos
+-- select f.nome, p.nome, a.horas
+-- from funcionario f left join alocacao a on f.codigo= a.codf
+-- left join projeto p on a.codp = p.codigo
+
+-- Retorne a média de horas trabalhadas por funcionario(codigo)
+-- select a.codf, avg(a.horas) 
+-- from alocacao a 
+-- group by(a.codf)
+
+-- Retorne a média de horas trabalhadas por funcionario(nome)
+-- select f.nome, avg(a.horas) 
+-- from alocacao a join funcionario f on
+-- a.codf = f.codigo
+-- group by(f.nome)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
