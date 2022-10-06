@@ -1,26 +1,60 @@
 
 -- Retorne o nome dos func, os nomes dos projetos e a quantidade de horas trabalhadas 
 -- pelo funcionario no projeto incluindo o nome dos funcionarios que nao trabalham em projetos
--- from funcionario f left join alocacao a on f.codigo= a.codf
--- left join projeto p on a.codp = p.codigo
 
-
--- Retorne o nome dos func, os nomes dos projetos e a quantidade de horas trabalhadas pelo
--- funcionario no projeto incluindo o nome dos funcionarios que nao trabalham em projetos
 -- select f.nome, p.nome, a.horas
 -- from funcionario f left join alocacao a on f.codigo= a.codf
 -- left join projeto p on a.codp = p.codigo
 
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+-- Retorne o nome dos func, os nomes dos projetos e a quantidade de horas trabalhadas pelo
+-- funcionario no projeto incluindo o nome dos funcionarios que nao trabalham em projetos
+
+-- select f.nome, p.nome, a.horas
+-- from funcionario f left join alocacao a on f.codigo= a.codf
+-- left join projeto p on a.codp = p.codigo
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 -- Retorne a média de horas trabalhadas por funcionario(codigo)
+
 -- select a.codf, avg(a.horas) 
 -- from alocacao a 
 -- group by(a.codf)
 
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 -- Retorne a média de horas trabalhadas por funcionario(nome)
+
 -- select f.nome, avg(a.horas) 
 -- from alocacao a join funcionario f on
 -- a.codf = f.codigo
 -- group by(f.nome)
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+-- Retorne a média de horas trabalhadas por funcionario(nome), somente para alocações depois de 01/01/2016
+
+-- select f.nome, avg(a.horas) 
+-- from alocacao a join funcionario f on
+-- a.codf = f.codigo
+-- where a.datai >= '01/01/2016'
+-- group by(f.nome)
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+-- Retorne a média de horas trabalhadas por funcionario(nome), somente para alocações 
+-- depois de 01/01/2016 e funcionarios com media > 3
+
+-- select f.nome, avg(a.horas) 
+-- from alocacao a join funcionario f on
+-- a.codf = f.codigo
+-- where a.datai >= '01/01/2016'
+-- group by(f.nome)
+-- having avg(a.horas)>3
+
+Boa sorte na prova!
 
 
 
