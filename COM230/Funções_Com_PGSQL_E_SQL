@@ -1,0 +1,59 @@
+-- CREATE OR REPLACE FUNCTION exerc1(pcodf int, pcodp int, phoras double precision)
+-- returns double precision as $$
+
+-- 	UPDATE alocacao set horas = phoras
+-- 	where codf = pcodf AND codp = pcodp
+-- 	returning horas
+-- $$ language SQL
+
+-- CREATE OR REPLACE FUNCTION exerc2(pcodp int) returns setof record as $$
+-- 	SELECT COUNT(codf), SUM(horas) FROM alocacao WHERE pcodp = codp
+-- $$ LANGUAGE SQL
+
+-- SELECT exerc2(2)
+
+-- CREATE OR REPLACE FUNCTION exerc3() returns setof record as $$
+-- 	SELECT nome, COUNT(codp) FROM funcionario f join alocacao a ON f.codigo = a.codf
+-- 	GROUP BY f.nome
+-- $$ LANGUAGE SQL
+	
+-- SELECT exerc3()
+
+-- CREATE OR REPLACE FUNCTION public.verifica(pcodf int) RETURNS
+-- SETOF character varying AS $$
+-- begin
+-- return query select p.nome from projeto p join alocacao a on p.codigo = a.codp
+-- where pcodf = a.codf;
+-- IF NOT FOUND THEN
+-- RAISE EXCEPTION 'Funcionario 
+-- % nao está alocado', pcodf;
+-- END IF;
+-- end; $$
+-- LANGUAGE plpgsql
+
+-- SELECT verifica(2)
+
+create or replace function testefuncao1 (valor int) returns int as $$
+declare
+	d departamento%rowtype; qtde int; cont int = 0;
+begin
+	for d in select * from departamento loop
+		select count(f.codigo) into qtde from funcionario f where codept = d.codigo;
+		if (qtde > valor) then
+			raise notice 'O departamento % possui mais funcionarios que o
+	permitido', d.codigo;
+			cont := cont +1;
+		end if;
+	end loop;
+	return cont;
+end;
+$$
+language plpgsql
+
+SELECT testefuncao1(2)
+
+
+
+
+
+-- SELECT * from funcionario
